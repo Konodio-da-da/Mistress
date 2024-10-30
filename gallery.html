@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #body{
+  margin:0;
+  height:100vh;
+  display:grid;
+  place-items:center;
+  background-color:#010101;
+}
+
+.gallery{
+  position:relative;
+  width:250px;
+  height:400px;
+  transform-style:preserve-3d;
+  animation:rotate 35s linear infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform:perspective(1200px) rotateY(0deg);
+  }
+  
+  to{
+    transform:perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery span{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform-origin:center;
+  transform-style:preserve-3d;
+  transform:rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery span img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+    </style>
+
+    <title>Gallery</title>
+</head>
+<body>
+    
+
+
+
+    <nav>
+        <div class="navbar">
+          <div class="container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>  
+            <div class="logo">
+              <h1></h1>
+            </div>
+            <div class="menu-items" style="background-color: red;">
+                <li><a style="font-family: cursive; font-size: 30px;"  href="./index.html">MISTRESS BEAUMONT</a></li>
+
+                <li><a  href="./aboutme.html">ABOUT</a></li>
+                <li><a style="color: black;" href="./gallery.html">GALLERY</a></li>
+                <li><a href="./dungeon.html">DUNGEON</a></li>
+                <li><a href="./sessions-etiquette.html">SESSIONS & ETIQUETTE</a></li>
+                <li><a href="./gifts-tributes.html">GIFTS & TRIBUTES</a></li>
+                <li><a href="./catalogue.html">CATALOGUE</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <div id="body" >
+
+          <div class="gallery">
+              <span style="--i:1">
+          <img src="./img/gallery/356625117_607835721450097_7131650366259725518_n.jpg" alt="" />
+        </span>
+        <span style="--i:2">
+          <img src="./img/gallery/434801346_1136909411094753_4332683491661058675_n.jpg" alt="" />
+        </span>
+        <span style="--i:3">
+          <img src="./img/gallery/431933798_779641880228493_8068329790908776401_n.jpg" alt="" />
+        </span>
+        <span style="--i:4">
+          <img src="./img/gallery/380720295_845934860162307_5414842161937278392_n.jpg" alt="" />
+        </span>
+        <span style="--i:5">
+          <img src="./img/gallery/393268587_840806700921997_5316997566575586454_n.jpg" alt="" />
+        </span>
+        <span style="--i:6">
+          <img src="./img/gallery/447096497_2110364362676956_476233448990801387_n.jpg" alt="" />
+        </span>
+        <span style="--i:7">
+          <img src="./img/gallery/449082973_371127662647182_1168347018508052182_n.jpg" alt="" />
+        </span>
+        <span style="--i:8">
+          <img src="./img/gallery/448278781_3800970276849774_2506141112300638924_n.jpg" alt="" />
+        </span>
+      </div>
+    </div>
+  
+      
+</body>
+</html>
